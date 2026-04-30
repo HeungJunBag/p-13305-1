@@ -31,7 +31,7 @@ public class ArticleController {
     public String detail(Model model, @PathVariable Integer id) {
         Article article = articleService.getArticle(id);
         model.addAttribute("article", article);
-        return "article_datail";
+        return "article_detail";
     }
 
     // GET /article/create
