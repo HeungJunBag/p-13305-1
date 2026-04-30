@@ -38,7 +38,7 @@ public class ArticleController {
     // 게시글 등록 폼 화면
     @GetMapping("/create")
     public String create() {
-        return "article_html";
+        return "article_create";
     }
 
     // POST /article/create
