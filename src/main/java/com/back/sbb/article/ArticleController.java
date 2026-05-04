@@ -3,10 +3,7 @@ package com.back.sbb.article;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -43,6 +40,7 @@ public class ArticleController {
 
     // POST /article/create
     // 게시글 등록 처리 (폼 제출)
+    @PostMapping("/create")
     public String createArticle(@RequestParam String title,@RequestParam String content) {
         articleService.create(title, content);
 
